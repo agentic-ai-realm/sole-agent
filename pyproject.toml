@@ -9,5 +9,5 @@ dependencies = [
 ]
 
 [tool.uv.sources]
-core = { path = "../corelibs/dist/corelibs-0.0.0-py3-none-any.whl" }
+corelibs = { path = "../corelibs/dist/corelibs-0.0.0-py3-none-any.whl" }
 
