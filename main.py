@@ -1,4 +1,4 @@
-from core.helpers.common.file_utils import FileUtils
+from corelibs.helpers.common.file_utils import FileUtils
 
 from crewai import Agent, LLM
 from crewai.lite_agent import LiteAgentOutput

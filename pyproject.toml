@@ -5,9 +5,9 @@ description = "Sole-Agent (Learningpath - Introductory)"
 readme = "README.md"
 requires-python = ">=3.11, <3.13"
 dependencies = [
-    "core_lib",
+    "corelibs",
 ]
 
 [tool.uv.sources]
-core = { path = "../core-lib/dist/core_lib-0.0.0-py3-none-any.whl" }
+core = { path = "../corelibs/dist/corelibs-0.0.0-py3-none-any.whl" }
 
