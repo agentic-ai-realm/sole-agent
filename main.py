@@ -1,4 +1,4 @@
-from corelibs.helpers.common.file_utils import FileUtils
+from helpers.common.file_utils import FileUtils
 
 from crewai import Agent, LLM
 from crewai.lite_agent import LiteAgentOutput
@@ -59,12 +59,12 @@ def run() -> None:
     result: LiteAgentOutput = sole_agent.kickoff(prompt)
 
     print("\n--- Professor Astra's Explanation ---\n")
-    print(result)
+    print(result.raw)
     print("\n========================================================================\n")
 
     timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
     filename: str = "./documents/photosynthesis_story_" + use_llm.model.split("/")[-1] + f"_{timestamp}.md"
-
+    FileUtils.write_file(filename, result.raw)
 
 if __name__ == '__main__':
     run()
